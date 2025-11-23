@@ -6,3 +6,5 @@ data.json
 history.bak
 .DS_Store
 /metruyenchu/src
+/test
+.vscode/
