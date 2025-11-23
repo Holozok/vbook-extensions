@@ -260,31 +260,3 @@ Console.log(); // Log data in tab logcat
 load("filename.js"); // Load file js
 sleep(10000); // Delay 10 giây
 ```
-
-# Test extension
-
-- PC cài Java phiên bản 1.8 trở lên
-- Kết nối điện thoại và PC cùng 1 mạng lan.
-- Trên điện thoại chạm 7 lần vào tên phiên bản để mở tính năng nhà phát triển
-
-  ![Version app](tutorial/1.jpg)
-
-- Bật `chế độ nhà phát triển` để lấy IP của điện thoại.
-
-![IP](tutorial/2.jpg)
-
-- Nhập IP vào tool trên PC
-
-![IP](tutorial/3.png)
-
-# Cách test extension với VSCode:
-
-- Cài [extension](https://github.com/faea726/vbook-extension-maker/releases/latest) vào VSCode
-
-- Mở một script bất kỳ
-
-- Chuột phải và chọn mục tương ứng.
-
-- Nhập thông tin khi có input box yêu cầu.
-
-![IP](tutorial/4.png)
