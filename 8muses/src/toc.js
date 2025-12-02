@@ -19,8 +19,16 @@ function execute(url) {
         })
 
         if (data.length) return Response.success(data);
+        else {
+            data.push({
+                name: 'Oneshot',
+                url: url,
+                host: host
+            })
+            return Response.success(data);
+        }
 
-        return Response.error(url);
+        //return Response.error(url);
     }
     return null;
 }
