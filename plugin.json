@@ -1,12 +1,12 @@
 {
   "metadata": {
-    "author": "Holo",
+    "author": "holozok",
     "description": ""
   },
   "data": [
     {
       "name": "Truyện QQ",
-      "author": "Holo",
+      "author": "holozok",
       "path": "https://raw.githubusercontent.com/Holozok/vbook-extensions/refs/heads/master/truyenqq/plugin.zip",
       "version": 1,
       "source": "https://truyenqqno.com",
@@ -14,6 +14,18 @@
       "description": "Đọc truyện trên trang truyenqq",
       "type": "comic",
       "locale": "vi_VN"
+    }
+    ,
+    {
+      "name": "8muses",
+      "author": "holozok",
+      "path": "https://raw.githubusercontent.com/Holozok/vbook-extensions/refs/heads/master/8muses/plugin.zip",
+      "version": 1,
+      "source": "https://8muses.io",
+      "icon": "https://raw.githubusercontent.com/Holozok/vbook-extensions/master/8muses/icon.png",
+      "description": "Đọc truyện trên trang https://8muses.io",
+      "type": "comic",
+      "locale": "en"
     }
   ]
 }
