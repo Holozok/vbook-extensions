@@ -14,7 +14,7 @@ function execute(key, page) {
         doc.select("#main_homepage .list_grid li").forEach(e => {
             var cover = e.select(".book_avatar img").attr("src");
             if (cover.startsWith("//")) {
-                cover = "http:" + cover;
+                cover = "https:" + cover;
             }
             novelList.push({
                 name: e.select(".book_name").text(),
