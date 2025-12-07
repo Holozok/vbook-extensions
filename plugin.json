@@ -13,7 +13,8 @@
       "icon": "https://raw.githubusercontent.com/Holozok/vbook-extensions/master/truyenqq/icon.png",
       "description": "Đọc truyện trên trang Truyện QQ",
       "type": "comic",
-      "locale": "vi_VN"
+      "locale": "vi_VN",
+      "tag": ""
     },
     {
       "name": "8muses",
@@ -24,7 +25,8 @@
       "icon": "https://raw.githubusercontent.com/Holozok/vbook-extensions/master/8muses/icon.png",
       "description": "Đọc truyện trên trang https://8muses.io",
       "type": "comic",
-      "locale": "en"
+      "locale": "en",
+      "tag": "nsfw"
     }
   ]
 }

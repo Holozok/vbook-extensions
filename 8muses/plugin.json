@@ -8,6 +8,7 @@
     "description": "Đọc truyện trên trang https://8muses.io",
     "locale": "en",
     "language": "javascript",
+	"tag": "nsfw",
     "type": "comic"
   },
   "script": {

@@ -134,7 +134,8 @@ function mergePlugins() {
         icon: `https://raw.githubusercontent.com/${CONFIG.repoOwner}/${CONFIG.repoName}/${CONFIG.branch}/${dir}/icon.png`,
         description: metadata.description || '',
         type: metadata.type || 'comic',
-        locale: metadata.locale || 'en'
+        locale: metadata.locale || 'en',
+        tag: metadata.tag || ''
       };
       
       if (existingIndex !== -1) {
