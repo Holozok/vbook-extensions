@@ -1,9 +1,12 @@
-load('bypass.js');
 load('config.js');
 function execute(url, page) {
     if (!page) page = '1';
     url = url.replace(".html", "") + "/trang-" + page + ".html";
-    var doc = bypass(BASE_URL + url, fetch(BASE_URL + url).html());
+    var doc = fetch(BASE_URL + url,{
+        headers: {
+            'user-agent': UserAgent.android()
+        }
+    }).html();
 
     if (doc) {
         var novelList = [];

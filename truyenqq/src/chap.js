@@ -1,9 +1,12 @@
-load('bypass.js');
 load('config.js');
 
 function execute(url) {
     url = url.replace(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n?]+)/img, BASE_URL);
-    let doc = bypass(url, fetch(url).html());
+    let doc = fetch(url,{
+        headers: {
+            'user-agent': UserAgent.android()
+        }
+    }).html()
     if (doc) {
         let imgs = doc.select(".chapter_content img.lazy");
         let data = [];

@@ -1,9 +1,12 @@
-load('bypass.js');
 load('config.js');
 function execute(url) {
     url = url.replace(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n?]+)/img, BASE_URL);
 
-    var doc = bypass(url, Http.get(url).html());
+    var doc = fetch(url,{
+        headers: {
+            'user-agent': UserAgent.android()
+        }
+    }).html();
     if(doc) {
         var list = [];
         var el = doc.select(".works-chapter-list a");
