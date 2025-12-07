@@ -6,16 +6,15 @@
   "data": [
     {
       "name": "Truyện QQ",
-      "author": "holozok",
+      "author": "Holozok",
       "path": "https://raw.githubusercontent.com/Holozok/vbook-extensions/refs/heads/master/truyenqq/plugin.zip",
       "version": 1,
       "source": "https://truyenqqno.com",
       "icon": "https://raw.githubusercontent.com/Holozok/vbook-extensions/master/truyenqq/icon.png",
-      "description": "Đọc truyện trên trang truyenqq",
+      "description": "Đọc truyện trên trang Truyện QQ",
       "type": "comic",
       "locale": "vi_VN"
-    }
-    ,
+    },
     {
       "name": "8muses",
       "author": "holozok",
