@@ -15,18 +15,6 @@
       "type": "comic",
       "locale": "vi_VN",
       "tag": ""
-    },
-    {
-      "name": "8muses",
-      "author": "holozok",
-      "path": "https://raw.githubusercontent.com/Holozok/vbook-extensions/refs/heads/master/8muses/plugin.zip",
-      "version": 1,
-      "source": "https://8muses.io",
-      "icon": "https://raw.githubusercontent.com/Holozok/vbook-extensions/master/8muses/icon.png",
-      "description": "Đọc truyện trên trang https://8muses.io",
-      "type": "comic",
-      "locale": "en",
-      "tag": "nsfw"
     }
   ]
 }
