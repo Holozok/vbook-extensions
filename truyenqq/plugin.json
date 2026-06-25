@@ -2,8 +2,8 @@
   "metadata": {
     "name": "Truyện QQ",
     "author": "Holozok",
-    "version": 1,
-    "source": "https://truyenqqno.com",
+    "version": 1.1,
+    "source": "https://truyenqqko.com",
     "regexp": "(www.)?truyenqq.*?/truyen-tranh/[0-9a-z-]+/?$",
     "description": "Đọc truyện trên trang Truyện QQ",
     "locale": "vi_VN",

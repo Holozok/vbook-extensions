@@ -1,7 +1,7 @@
 load('config.js');
 function execute(key, page) {
     if (!page) page = '1';
-    var url = BASE_URL +"/tim-kiem/trang-" + page + ".html?q=" + key;
+    var url = BASE_URL +"/tim-kiem/trang-" + page + "?q=" + key;
     var doc = fetch(url,{
         headers: {
             'user-agent': UserAgent.android()
