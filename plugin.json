@@ -15,6 +15,18 @@
       "type": "comic",
       "locale": "vi_VN",
       "tag": ""
+    },
+    {
+      "name": "allporncomic",
+      "author": "Holozok",
+      "path": "https://raw.githubusercontent.com/Holozok/vbook-extensions/refs/heads/master/extensions/allporncomic/plugin.zip",
+      "version": 1,
+      "source": "https://allporncomic.com",
+      "icon": "https://raw.githubusercontent.com/Holozok/vbook-extensions/master/extensions/allporncomic/icon.png",
+      "description": "Đọc truyện trên trang allporncomic.com",
+      "type": "comic",
+      "locale": "en_US",
+      "tag": "nsfw"
     }
   ]
 }

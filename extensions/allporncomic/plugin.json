@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "name": "allporncomic",
+    "author": "Holozok",
+    "version": 1,
+    "source": "https://allporncomic.com",
+    "regexp": "(www\\.)?allporncomic\\.(com|net).*?/porncomic/[0-9a-z-]+(?:/[0-9]+-[0-9a-z-]+)?/?$",
+    "description": "Đọc truyện trên trang allporncomic.com",
+    "locale": "en_US",
+    "language": "javascript",
+    "tag": "nsfw",
+    "type": "comic"
+  },
+  "script": {
+    "home": "home.js",
+    "genre": "genre.js",
+    "detail": "detail.js",
+    "search": "search.js",
+    "page": "page.js",
+    "toc": "toc.js",
+    "chap": "chap.js"
+  }
+}
