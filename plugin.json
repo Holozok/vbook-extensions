@@ -7,10 +7,10 @@
     {
       "name": "Truyện QQ",
       "author": "Holozok",
-      "path": "https://raw.githubusercontent.com/Holozok/vbook-extensions/refs/heads/master/truyenqq/plugin.zip",
+      "path": "https://raw.githubusercontent.com/Holozok/vbook-extensions/refs/heads/master/extensions/truyenqq/plugin.zip",
       "version": 2,
       "source": "https://truyenqqko.com",
-      "icon": "https://raw.githubusercontent.com/Holozok/vbook-extensions/master/truyenqq/icon.png",
+      "icon": "https://raw.githubusercontent.com/Holozok/vbook-extensions/master/extensions/truyenqq/icon.png",
       "description": "Đọc truyện trên trang Truyện QQ",
       "type": "comic",
       "locale": "vi_VN",

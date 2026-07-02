@@ -80,6 +80,7 @@ const CONFIG = getRepoConfig();
 function mergePlugins() {
   const rootDir = __dirname;
   const mainPluginPath = path.join(rootDir, 'plugin.json');
+  const extensionsDir = path.join(rootDir, 'extensions');
   
   // Đọc file plugin.json chính
   let mainPlugin = JSON.parse(fs.readFileSync(mainPluginPath, 'utf8'));
@@ -89,11 +90,11 @@ function mergePlugins() {
     mainPlugin.data = [];
   }
   
-  // Quét các thư mục con
-  const dirs = fs.readdirSync(rootDir);
+  // Quét các thư mục extension trong /extensions
+  const dirs = fs.existsSync(extensionsDir) ? fs.readdirSync(extensionsDir) : [];
   
   dirs.forEach(dir => {
-    const dirPath = path.join(rootDir, dir);
+    const dirPath = path.join(extensionsDir, dir);
     const stat = fs.statSync(dirPath);
     
     // Chỉ xử lý thư mục
@@ -128,10 +129,10 @@ function mergePlugins() {
       const pluginData = {
         name: metadata.name || dir,
         author: metadata.author || '',
-        path: `https://raw.githubusercontent.com/${CONFIG.repoOwner}/${CONFIG.repoName}/refs/heads/${CONFIG.branch}/${dir}/plugin.zip`,
+        path: `https://raw.githubusercontent.com/${CONFIG.repoOwner}/${CONFIG.repoName}/refs/heads/${CONFIG.branch}/extensions/${dir}/plugin.zip`,
         version: metadata.version || 1,
         source: metadata.source || '',
-        icon: `https://raw.githubusercontent.com/${CONFIG.repoOwner}/${CONFIG.repoName}/${CONFIG.branch}/${dir}/icon.png`,
+        icon: `https://raw.githubusercontent.com/${CONFIG.repoOwner}/${CONFIG.repoName}/${CONFIG.branch}/extensions/${dir}/icon.png`,
         description: metadata.description || '',
         type: metadata.type || 'comic',
         locale: metadata.locale || 'en',
