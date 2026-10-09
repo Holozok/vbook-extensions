@@ -88,5 +88,6 @@ function execute(url) {
     }
 
     if (chapters.length === 0) return Response.error("No chapters found");
+    chapters.reverse();
     return Response.success(chapters);
 }

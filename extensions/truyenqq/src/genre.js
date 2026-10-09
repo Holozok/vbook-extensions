@@ -1,5 +1,5 @@
 load('config.js');
-/*
+
 function execute() {
     return Response.success([
         {
@@ -229,7 +229,8 @@ function execute() {
         }
     ]);
 }
-*/
+
+/*
 function execute() {
     let response = fetch(BASE_URL);
     if (response.ok) {
@@ -244,3 +245,4 @@ function execute() {
     }
     return null;
 }
+*/

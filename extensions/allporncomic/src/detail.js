@@ -40,11 +40,11 @@ function execute(url) {
     var status = (statusEl ? statusEl.text() : "") + "";
     var ongoing = status.indexOf("Completed") === -1 && status.indexOf("Complete") === -1 && status.indexOf("Hoàn") === -1;
 
-    var description = (doc.select("meta[property=og:description]").attr("content") || "").trim();
-    if (!description) {
-        var descEl = doc.select("div.summary__content, .summary .summary-content, .post-content, .entry-content, .description, .entry").first();
-        description = (descEl ? descEl.html() : "") + "";
-    }
+//    var description = (doc.select("meta[property=og:description]").attr("content") || "").trim();
+//    if (!description) {
+//        var descEl = doc.select("div.summary__content, .summary .summary-content, .post-content, .entry-content, .description, .entry").first();
+//        description = (descEl ? descEl.html() : "") + "";
+//    }
 
     var genres = [];
     var seen = {};
@@ -57,5 +57,5 @@ function execute(url) {
         genres.push({ title: gTitle, input: gHref, script: "gen.js" });
     });
 
-    return Response.success({ name: name, cover: cover, host: BASE_URL, author: author, description: description, ongoing: ongoing, genres: genres });
+    return Response.success({ name: name, cover: cover, host: BASE_URL, author: author, description: '', ongoing: ongoing, genres: genres });
 }
