@@ -1,0 +1,23 @@
+{
+    "metadata": {
+        "name": "Mimi Hentai",
+        "author": "Holozok",
+        "version": 1,
+        "source": "https://mimihentai.moe",
+        "regexp": "(www.)?mimihentai.moe/manga/\\d+",
+        "description": "Extension đọc truyện tranh 18+ từ mimihentai.com",
+        "locale": "vi_VN",
+        "language": "javascript",
+        "type": "comic",
+        "tag": "nsfw"
+    },
+    "script": {
+        "home": "home.js",
+        "genre": "genres.js",
+        "detail": "detail.js",
+        "toc": "toc.js",
+        "chap": "chap.js",
+        "suggest": "suggest.js",
+        "search": "search.js"
+    }
+}

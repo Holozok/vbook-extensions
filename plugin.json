@@ -27,6 +27,18 @@
       "type": "comic",
       "locale": "en_US",
       "tag": "nsfw"
+    },
+    {
+      "name": "Mimi Hentai",
+      "author": "Holozok",
+      "path": "https://raw.githubusercontent.com/Holozok/vbook-extensions/refs/heads/master/extensions/mimih/plugin.zip",
+      "version": 1,
+      "source": "https://mimihentai.moe",
+      "icon": "https://raw.githubusercontent.com/Holozok/vbook-extensions/master/extensions/mimih/icon.png",
+      "description": "Extension đọc truyện tranh 18+ từ mimihentai.com",
+      "type": "comic",
+      "locale": "vi_VN",
+      "tag": "nsfw"
     }
   ]
 }
