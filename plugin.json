@@ -39,18 +39,6 @@
       "type": "comic",
       "locale": "vi_VN",
       "tag": "nsfw"
-    },
-    {
-      "name": "MangaDex",
-      "author": "Holozok",
-      "path": "https://raw.githubusercontent.com/Holozok/vbook-extensions/refs/heads/master/extensions/mangadex/plugin.zip",
-      "version": 1,
-      "source": "https://mangadex.org",
-      "icon": "https://raw.githubusercontent.com/Holozok/vbook-extensions/master/extensions/mangadex/icon.png",
-      "description": "Đọc truyện tranh trên MangaDex (đa ngôn ngữ)",
-      "type": "comic",
-      "locale": "global",
-      "tag": ""
     }
   ]
 }
