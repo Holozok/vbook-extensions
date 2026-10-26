@@ -9,4 +9,5 @@ history.bak
 /test
 .vscode/
 */test/
-/.nsfw
+/.unreleased
+/.claude

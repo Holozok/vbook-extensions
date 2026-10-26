@@ -19,10 +19,10 @@
     {
       "name": "allporncomic",
       "author": "Holozok",
-      "path": "https://raw.githubusercontent.com/Holozok/vbook-extensions/refs/heads/master/extensions/allporncomic/plugin.zip",
+      "path": "https://raw.githubusercontent.com/Holozok/vbook-extensions/refs/heads/master/extensions/apcomic/plugin.zip",
       "version": 1,
       "source": "https://allporncomic.com",
-      "icon": "https://raw.githubusercontent.com/Holozok/vbook-extensions/master/extensions/allporncomic/icon.png",
+      "icon": "https://raw.githubusercontent.com/Holozok/vbook-extensions/master/extensions/apcomic/icon.png",
       "description": "Đọc truyện trên trang allporncomic.com",
       "type": "comic",
       "locale": "en_US",
