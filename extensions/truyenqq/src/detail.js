@@ -1,10 +1,8 @@
 load('config.js');
 function execute(url) {
     url = normalizeUrl(url);
-    var res = fetch(url);
-    if (!res.ok) return Response.error("HTTP " + res.status);
-    var doc = res.html();
-    if (isCloudflareChallenge(doc)) return Response.error("Cloudflare đang chặn, mở truyenqqko.com trong trình duyệt của app để xác minh rồi thử lại");
+    var doc = loadPage(url);
+    if (!doc) return Response.error("Cloudflare đang chặn, mở truyenqqko.com trong trình duyệt của app để xác minh rồi thử lại");
 
     var coverEl = doc.select(".book_avatar img").first();
     var cover = coverEl ? (coverEl.attr("src") || "") + "" : "";

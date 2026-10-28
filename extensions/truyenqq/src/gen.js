@@ -2,10 +2,8 @@ load('config.js');
 function execute(url, page) {
     if (!page) page = '1';
     url = (url + "").replace(".html", "") + "/trang-" + page;
-    var res = fetch(BASE_URL + url);
-    if (!res.ok) return Response.error("HTTP " + res.status);
-    var doc = res.html();
-    if (isCloudflareChallenge(doc)) return Response.error("Cloudflare đang chặn, mở truyenqqko.com trong trình duyệt của app để xác minh rồi thử lại");
+    var doc = loadPage(BASE_URL + url);
+    if (!doc) return Response.error("Cloudflare đang chặn, mở truyenqqko.com trong trình duyệt của app để xác minh rồi thử lại");
 
     var novelList = [];
     doc.select(".list_grid li").forEach(function (e) {

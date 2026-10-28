@@ -12,3 +12,5 @@ history.bak
 /.unreleased
 /.claude
 /backups/
+# per-machine vBook dev server list
+.agents/skills/vbook-extensions/scripts/servers.json
