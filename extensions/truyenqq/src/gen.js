@@ -1,32 +1,37 @@
 load('config.js');
 function execute(url, page) {
     if (!page) page = '1';
-    url = url.replace(".html", "") + "/trang-" + page;
-    var doc = fetch(BASE_URL + url,{
-        headers: {
-            'user-agent': UserAgent.android()
+    url = (url + "").replace(".html", "") + "/trang-" + page;
+    var res = fetch(BASE_URL + url);
+    if (!res.ok) return Response.error("HTTP " + res.status);
+    var doc = res.html();
+    if (isCloudflareChallenge(doc)) return Response.error("Cloudflare đang chặn, mở truyenqqko.com trong trình duyệt của app để xác minh rồi thử lại");
+
+    var novelList = [];
+    doc.select(".list_grid li").forEach(function (e) {
+        var linkEl = e.select(".book_name a").first();
+        if (!linkEl) return;
+        var cover = e.select(".book_avatar img").attr("src") + "";
+        if (cover.indexOf("//") === 0) {
+            cover = "https:" + cover;
+        } else if (cover && cover.indexOf("http") !== 0) {
+            cover = BASE_URL + cover;
         }
-    }).html();
+        novelList.push({
+            name: e.select(".book_name").text() + "",
+            link: linkEl.attr("href") + "",
+            description: e.select(".last_chapter").text() + "",
+            cover: cover,
+            host: BASE_URL
+        });
+    });
 
-    if (doc) {
-        var novelList = [];
-        var next = doc.select(".page_redirect").select("a:has(p.active) + a").last().text();
-        doc.select("#main_homepage .list_grid li").forEach(e => {
-            var cover = e.select(".book_avatar img").attr("src");
-            if (cover.startsWith("//")) {
-                cover = "http:" + cover;
-            }
-            novelList.push({
-                name: e.select(".book_name").text(),
-                link: e.select(".book_name a").first().attr("href"),
-                description: e.select(".last_chapter").text(),
-                cover: cover,
-                host: BASE_URL
-            });
-        })
+    return Response.success(novelList, nextPageToken(doc));
+}
 
-        return Response.success(novelList, next)
-    }
-
-    return null;
+function nextPageToken(doc) {
+    var nextEl = doc.select(".page_redirect a:has(p.active) + a").first();
+    if (!nextEl) return "";
+    var matched = (nextEl.attr("href") + "").match(/\/trang-(\d+)/);
+    return matched ? matched[1] : "";
 }

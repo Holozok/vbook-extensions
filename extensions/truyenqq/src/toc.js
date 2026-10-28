@@ -1,25 +1,21 @@
 load('config.js');
 function execute(url) {
-    url = url.replace(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n?]+)/img, BASE_URL);
+    url = normalizeUrl(url);
 
-    var doc = fetch(url,{
-        headers: {
-            'user-agent': UserAgent.android()
-        }
-    }).html();
-    if(doc) {
-        var list = [];
-        var el = doc.select(".works-chapter-list a");
-        for (var i = el.size() - 1; i >= 0; i--) {
-            var e = el.get(i);
-            list.push({
-                name: e.text(),
-                url: e.attr("href"),
-                host: BASE_URL,
-            });
-        }
-        return Response.success(list);
+    var res = fetch(url);
+    if (!res.ok) return Response.error("HTTP " + res.status);
+    var doc = res.html();
+    if (isCloudflareChallenge(doc)) return Response.error("Cloudflare đang chặn, mở truyenqqko.com trong trình duyệt của app để xác minh rồi thử lại");
+
+    var list = [];
+    var el = doc.select(".works-chapter-list a");
+    for (var i = el.size() - 1; i >= 0; i--) {
+        var e = el.get(i);
+        list.push({
+            name: e.text() + "",
+            url: e.attr("href") + "",
+            host: BASE_URL
+        });
     }
-
-    return null;
+    return Response.success(list);
 }
