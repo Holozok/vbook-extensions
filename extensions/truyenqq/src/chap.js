@@ -5,6 +5,12 @@ function execute(url) {
     var doc = loadPage(url);
     if (!doc) return Response.error("Cloudflare đang chặn, mở truyenqqko.com trong trình duyệt của app để xác minh rồi thử lại");
 
+    // Same guard: a blocked page is HTML but has no reader block, so check the container
+    // instead of relying only on the Cloudflare title.
+    if (doc.select(".chapter_content").size() === 0) {
+        return Response.error("Không đọc được nội dung chương (trang bị Cloudflare chặn hoặc cookie đã hết hạn). Mở truyenqqko.com trong trình duyệt của app để xác minh rồi thử lại");
+    }
+
     var imgs = doc.select(".chapter_content img.lazy");
     var data = [];
     for (var i = 0; i < imgs.size(); i++) {
@@ -14,7 +20,8 @@ function execute(url) {
         if (!link) continue;
         var fallback = cdnUrl(e.attr("data-cdn"));
         var item = {
-            link: link
+            link: link,
+            script: "image.js"
         };
         if (fallback && fallback !== link) {
             item.fallback = [fallback];
